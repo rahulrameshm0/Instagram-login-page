@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/insta-fav.ico' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(85deg,
+                    rgba(139, 80, 223, 0.8),
+                    rgba(226, 67, 125, 0.8),
+                    rgb(244, 150, 67));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: auto;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 4rem 4rem;
+            text-align: center;
+            border-radius: 2rem;
+            box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            margin-bottom: 1.4rem;
+        }
+
+        input {
+            width: 20vw;
+            height: 5vh;
+            margin-top: 1.4rem;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgb(185, 182, 182);
+            margin-bottom: 0.8rem;
+        }
+
+        input[type="email"] {
+            padding-left: 10px;
+            font-size: 18px;
+        }
+
+        input[type="password"] {
+            padding-left: 10px;
+            font-size: 18px;
+        }
+
+        .forget {
+            text-decoration: none;
+            font-size: 15px;
+            color: blue;
+        }
+
+        button {
+            margin-top: 2rem;
+            width: 100%;
+            height: 5vh;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(65, 120, 222);
+            color: #fff;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: rgb(85, 139, 201);
+        }
+
+        .create,
+        a {
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+        .app-available img{
+            height: 5vh;
+            margin-top: 2rem;
+        }
+
+        .line{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .line hr{
+            flex: 1;
+        }
+
+        .logo a{
+            margin-top:28px;
+            color:rgb(76, 76, 234);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 16px;
+        }
+
+        #icon{
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{% static 'images/instagram-logo.png' %}" alt="instagram">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="email" name="name" id="Username" placeholder="Email Id" , required><br>
+            <input type="password" name="password" id="password" placeholder="Password"><br>
+            <a href="" class="forget">Forget Password?</a><br>
+            <button type="submit">Log In</button>
+        </form>
+        <span class="line"><hr>OR<hr></span>
+        <p class="logo"><a href="https://en-gb.facebook.com/login/web/"><ion-icon id="icon" name="logo-facebook"></ion-icon> Login With Facebook</a></p>
+        <div class="create-account">
+            <p class="create">Don't have an account?<a href="#">Signup</a></p>
+        </div>
+        <div class="app-available">
+            <a href="https://apps.apple.com/us/app/instagram/id389801252"> <img src="{% static 'images/apple-button.png' %}" alt="apple-button"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3D5CDD7621-8B64-4AC6-BC26-21E07BC5EADC%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge%26original_referrer%3Dhttps%3A%2F%2Fwww.google.com%2F"><img src="{% static 'images/googleplay-button.png' %}" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>
