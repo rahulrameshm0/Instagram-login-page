@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <style>
         * {
             margin: 0;
@@ -134,13 +134,13 @@
             {% csrf_token %}
             <input type="email" name="name" id="Username" placeholder="Email Id" , required><br>
             <input type="password" name="password" id="password" placeholder="Password"><br>
-            <a href="" class="forget">Forget Password?</a><br>
+            <a href="#" class="forget">Forget Password?</a><br>
             <button type="submit">Log In</button>
         </form>
         <span class="line"><hr>OR<hr></span>
         <p class="logo"><a href="https://en-gb.facebook.com/login/web/"><ion-icon id="icon" name="logo-facebook"></ion-icon> Login With Facebook</a></p>
         <div class="create-account">
-            <p class="create">Don't have an account?<a href="#">Signup</a></p>
+            <p class="create">Don't have an account?<a href="signup">Signup</a></p>
         </div>
         <div class="app-available">
             <a href="https://apps.apple.com/us/app/instagram/id389801252"> <img src="{% static 'images/apple-button.png' %}" alt="apple-button"></a>
