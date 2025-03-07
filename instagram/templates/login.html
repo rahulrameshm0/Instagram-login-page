@@ -124,6 +124,16 @@
             height: 1.5rem;
             width: 1.5rem;
         }
+
+        #alert{
+            background-color: rgb(120, 194, 120);
+            color: #fff;
+            margin: 2rem;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+
+        }
     </style>
 </head>
 
@@ -147,6 +157,15 @@
             <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=ig_mid%3D5CDD7621-8B64-4AC6-BC26-21E07BC5EADC%26utm_campaign%3DloginPage%26utm_content%3Dlo%26utm_source%3Dinstagramweb%26utm_medium%3Dbadge%26original_referrer%3Dhttps%3A%2F%2Fwww.google.com%2F"><img src="{% static 'images/googleplay-button.png' %}" alt=""></a>
         </div>
     </div>
+    <div id="popup">
+       {% for message in messages %}
+           {% if messages %}
+               <div id="alert">
+                   {{ message }}
+               </div>
+           {% endif %}
+       {% endfor %}
+   </div>
 </body>
 
 </html>
