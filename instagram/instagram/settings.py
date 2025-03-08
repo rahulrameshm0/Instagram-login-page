@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-8p@w8#c5_e&ns*tv)8f!^wcn*k@o-9+@tjh__!bko9j+g2!$x%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['instagram-login-page-production.up.railway.app', 'http://instagram-login-page-production.up.railway.app']
+ALLOWED_HOSTS = ['instagram-login-page.railway.internal', 'http://instagram-login-page.railway.internal']
 
-CSRF_TRUSTED_ORIGINS = ['instagram-login-page-production.up.railway.app', 'http://instagram-login-page-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['instagram-login-page.railway.internal', 'http://instagram-login-page.railway.internal']
 
 
 # Application definition
