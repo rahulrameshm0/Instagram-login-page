@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 # Create your views here.
 
 def user_login(request):
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
-        user = authenticate(request, Email=email, Password=password)
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        print(f"Email: {email}, Password: {password}")
+
+        user_obj = User.objects.get(email=email)
+        user = authenticate(request, username=user_obj.username, password=password)
         if user is not None:
             login(request,user)
             return redirect("home")
@@ -41,5 +45,9 @@ def signup(request):
     
     return render(request, "signup.html")
 
-def main_page(request):
-    pass
+def home_page(request):
+    return render(request, "home.html")
+
+def user_logout(request):
+    logout(request)
+    return redirect("login")

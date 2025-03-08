@@ -140,9 +140,9 @@
 <body>
     <div class="container">
         <img src="{% static 'images/instagram-logo.png' %}" alt="instagram">
-        <form action="" method="post">
+        <form action="" method="POST">
             {% csrf_token %}
-            <input type="email" name="name" id="Username" placeholder="Email Id" , required><br>
+            <input type="email" name="email" id="Username" placeholder="Email id" , required><br>
             <input type="password" name="password" id="password" placeholder="Password"><br>
             <a href="#" class="forget">Forget Password?</a><br>
             <button type="submit">Log In</button>
