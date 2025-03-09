@@ -1,2 +1,0 @@
-web: gunicorn insta_app.wsgi --log-file
-web: python manage.py migrate && gunicorn insta_app.wsg
